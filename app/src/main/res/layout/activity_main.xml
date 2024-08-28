@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/albumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/album"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:padding="8dp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/albumTitle"
+        android:background="@drawable/round_arrow_back_ios_new_24"
+        android:contentDescription="Back" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/albumTitle"
+        android:background="@drawable/three_dots"
+        android:contentDescription="Menu" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/albumTitle"
+        android:layout_above="@id/seekBar">
+        <ImageView
+            android:id="@+id/albumImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/music_album"
+            android:background="@drawable/round"
+            android:clipToOutline="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/artistName"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/yellow"
+        android:progressBackgroundTint="@color/orange"
+        android:thumb="@drawable/seek_play"
+        android:thumbTint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/artistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:text="@string/artist"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/titleInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/titleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow"
+        android:text="@string/title"
+        android:textSize="16sp"
+        android:layout_above="@+id/musicControls"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"/>
+
+    <RelativeLayout
+        android:id="@+id/musicControls"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_skip_previous_24"
+            android:layout_toStartOf="@id/playButton"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="Previous" />
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="Play"
+            android:src="@drawable/round_play_arrow_24"
+            android:background="@drawable/circle"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_skip_next_24"
+            android:layout_toEndOf="@id/playButton"
+            android:layout_marginStart="32dp"
+            android:contentDescription="Next" />
+    </RelativeLayout>
+
+</RelativeLayout>
