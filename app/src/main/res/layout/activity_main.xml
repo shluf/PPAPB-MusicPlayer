@@ -49,6 +49,7 @@
             android:id="@+id/albumImage"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:contentDescription="Album Image"
             android:src="@drawable/music_album"
             android:background="@drawable/round"
             android:clipToOutline="true"
@@ -87,44 +88,39 @@
         android:textColor="@color/yellow"
         android:text="@string/title"
         android:textSize="16sp"
-        android:layout_above="@+id/musicControls"
+        android:layout_above="@+id/playButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"/>
 
-    <RelativeLayout
-        android:id="@+id/musicControls"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp">
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Play"
+        android:src="@drawable/round_play_arrow_24"
+        android:background="@drawable/circle"/>
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_skip_previous_24"
-            android:layout_toStartOf="@id/playButton"
-            android:layout_marginEnd="32dp"
-            android:contentDescription="Previous" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_skip_previous_24"
+        android:layout_toStartOf="@id/playButton"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="Previous" />
 
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="Play"
-            android:src="@drawable/round_play_arrow_24"
-            android:background="@drawable/circle"/>
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_skip_next_24"
-            android:layout_toEndOf="@id/playButton"
-            android:layout_marginStart="32dp"
-            android:contentDescription="Next" />
-    </RelativeLayout>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_skip_next_24"
+        android:layout_toEndOf="@id/playButton"
+        android:layout_marginStart="32dp"
+        android:contentDescription="Next" />
 
 </RelativeLayout>
